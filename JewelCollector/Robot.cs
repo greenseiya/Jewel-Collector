@@ -9,23 +9,33 @@ public class Robot : ObjetoNaTela{
 
     public enum DirecaoMovimento {Esquerda, Direita, Cima, Baixo};
     public Robot(){
-        this.X=9;
+        this.X=0;
         this.Y=0;
         this.Symbol=" ME ";
         this.energy=5;
         this.bagValue=0;
         this.bagNumItens=0;
+        this.Cor = ConsoleColor.Yellow;
     }
 
     public void Mover (Robot.DirecaoMovimento direcao, Map mapa){
-        if (direcao is Robot.DirecaoMovimento.Cima){
-            mapa.Remove(this.X, this.Y);
-            this.X--;
-        }
-        
+        mapa.Remove(this);
+        if (direcao is Robot.DirecaoMovimento.Cima) this.X--;
+        else if (direcao is Robot.DirecaoMovimento.Baixo) this.X++;
+        else if (direcao is Robot.DirecaoMovimento.Direita) this.Y++;
+        else if (direcao is Robot.DirecaoMovimento.Esquerda) this.Y--;    
+        mapa.Add(this);    
+    }
+
+    public void PegarJoia(Map mapa){
+        Jewel joia = (Jewel)mapa.PegaJoia(this.X, this.Y);
+        this.bagValue += joia.Value;
+        this.bagNumItens++;
+        mapa.Remove(joia);
     }
 
     public void ImprimirBag (){
+        Console.WriteLine();
         Console.WriteLine("Bag Total Itens: " + this.bagNumItens + " | Bag value: " + this.bagValue+ " | Energy: " + this.energy);
     }
 }

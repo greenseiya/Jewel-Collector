@@ -11,8 +11,14 @@ public class Obstacle : ObjetoNaTela{
         this.Y=y;
         this.tipo=tipo;
 
-        if (tipo == Obstacle.Type.Water){ this.Symbol = " ## ";}
-        else {this.Symbol = " $$ ";}
+        if (tipo == Obstacle.Type.Water){ 
+            this.Symbol = " ## ";
+            this.Cor= ConsoleColor.DarkBlue;
+        }
+        else {
+            this.Symbol = " $$ ";
+            this.Cor = ConsoleColor.DarkGreen;
+        }
         
     }
 }
