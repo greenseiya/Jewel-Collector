@@ -4,13 +4,17 @@ Jewel.cs - A classe Jewel deverá armazenar as informações da joia, como a pos
 
 public class Jewel : ObjetoNaTela{
     private int value;
+    private Type tipo;
     public enum Type {Red, Green, Blue};
 
     public int Value { get => value; set => this.value = value; }
+    public Type Tipo { get => tipo; }
 
     public Jewel(int x, int y, Jewel.Type tipo ){
         this.X=x;
         this.Y=y;
+        this.tipo = tipo;
+        this.Walkable = false;
 
         if (tipo == Jewel.Type.Red){
             this.Symbol = " JR ";

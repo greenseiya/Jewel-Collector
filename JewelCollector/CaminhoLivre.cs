@@ -9,5 +9,6 @@ public class CaminhoLivre : ObjetoNaTela{
         this.Y = y;
         this.Symbol = " -- ";
         this.Cor = ConsoleColor.White;
+         this.Walkable = true;
     }
 }
