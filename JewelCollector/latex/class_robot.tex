@@ -1,0 +1,220 @@
+\hypertarget{class_robot}{}\doxysection{Robot Class Reference}
+\label{class_robot}\index{Robot@{Robot}}
+
+
+Classe {\ttfamily \mbox{\hyperlink{class_robot}{Robot}}} herda de {\ttfamily \mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}}} e representa o jogador gerenciando a quatidade de pontos coletados, quantidade de jóias e a energia disponivel.   
+
+
+Inheritance diagram for Robot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_robot}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_robot_adc335de87bcdff79aedb1ca355c13d95}{Direcao\+Movimento}} 
+\begin{DoxyCompactList}\small\item\em Direções de movimento possiveis para o jogador\+: 
+\begin{DoxyItemize}
+\item Cima 
+\item Baixo 
+\item Esquerda 
+\item Direita 
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_robot_a899114af78c979be2f049a36d19f697b}{Robot}} ()
+\begin{DoxyCompactList}\small\item\em Contrutor determina os valores iniciais padrões para o jogador\+: 
+\begin{DoxyItemize}
+\item Posição x,y = (0,0) 
+\item Energia = 5 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_a6f1b02d6a4b277911b8a94d132efd42c}{reset\+Robot}} ()
+\begin{DoxyCompactList}\small\item\em Volta os valores de\+: 
+\begin{DoxyItemize}
+\item Posição x,y 
+\item Energia 
+\item Total de pontos (Value) 
+\item Numero de jóias coletadas 
+\end{DoxyItemize}Para o valor padrão quando o jogador avança uma fase  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_ae0eff59916bb72759d2511b0f7cf4a95}{Mover}} (\mbox{\hyperlink{class_robot_adc335de87bcdff79aedb1ca355c13d95}{Robot.\+Direcao\+Movimento}} direcao, \mbox{\hyperlink{class_map}{Map}} mapa)
+\begin{DoxyCompactList}\small\item\em Movimenta o jogador em uma determinada posição. Durante o movimento a função checa se a quatidade de energia é suficiente. Caso contrario o evento {\ttfamily Low\+Energy\+Event} é lançado.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_a1e71b633c1f4f7161b8020a2c22a828b}{Pegar\+Joia}} (\mbox{\hyperlink{class_map}{Map}} mapa)
+\begin{DoxyCompactList}\small\item\em Coleta uma joia adjascente ao player no mapa, adiciona seu valor ao total de pontos, soma na quantidade de itens da bolsa e remove do mapa a jóia. Caso a joia coletada seja Azul aumenta a energia disponivel para o player em 5.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_aff0465c1b585f0ab6c8fbea5da4f91c7}{Recharge\+WArvore}} (\mbox{\hyperlink{class_map}{Map}} mapa)
+\begin{DoxyCompactList}\small\item\em Quanto adjascente a uma ou mais arvores recarrega a energia disponivel para o player em 3 unidade por arvore adjascente.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_ae4a6a68bea35728ed44c71151a411519}{Imprimir\+Bag}} ()
+\begin{DoxyCompactList}\small\item\em Imprime na tela a situação atual do inventário do player\+: Quantidade total de itens, Quantidade total de pontos e energia disponivel.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_robot_ab2d1c59977c82a665123106d51f8214a}{On\+Low\+Energy\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Evento lançado quando o jogador fica sem energia.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_robot_a1ae18603342894ba1af361b704a33d32}{Energy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Armaze a quantidade de energia que o jogar tem disponivel para se locomover.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler? \mbox{\hyperlink{class_robot_aa4c111d9ddfab8b47d546d0b01f50892}{Low\+Energy\+Event}}
+\begin{DoxyCompactList}\small\item\em Evento disparado quando o jogador fica sem energia para se movimentar e tenta se mover.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe {\ttfamily \mbox{\hyperlink{class_robot}{Robot}}} herda de {\ttfamily \mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}}} e representa o jogador gerenciando a quatidade de pontos coletados, quantidade de jóias e a energia disponivel.  
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_robot_adc335de87bcdff79aedb1ca355c13d95}\label{class_robot_adc335de87bcdff79aedb1ca355c13d95}} 
+\index{Robot@{Robot}!DirecaoMovimento@{DirecaoMovimento}}
+\index{DirecaoMovimento@{DirecaoMovimento}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{DirecaoMovimento}{DirecaoMovimento}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_robot_adc335de87bcdff79aedb1ca355c13d95}{Robot.\+Direcao\+Movimento}}}
+
+
+
+Direções de movimento possiveis para o jogador\+: 
+\begin{DoxyItemize}
+\item Cima 
+\item Baixo 
+\item Esquerda 
+\item Direita 
+\end{DoxyItemize}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_robot_a899114af78c979be2f049a36d19f697b}\label{class_robot_a899114af78c979be2f049a36d19f697b}} 
+\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}}
+{\footnotesize\ttfamily Robot.\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Contrutor determina os valores iniciais padrões para o jogador\+: 
+\begin{DoxyItemize}
+\item Posição x,y = (0,0) 
+\item Energia = 5 
+\end{DoxyItemize}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_robot_ae4a6a68bea35728ed44c71151a411519}\label{class_robot_ae4a6a68bea35728ed44c71151a411519}} 
+\index{Robot@{Robot}!ImprimirBag@{ImprimirBag}}
+\index{ImprimirBag@{ImprimirBag}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{ImprimirBag()}{ImprimirBag()}}
+{\footnotesize\ttfamily void Robot.\+Imprimir\+Bag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime na tela a situação atual do inventário do player\+: Quantidade total de itens, Quantidade total de pontos e energia disponivel.  
+
+\mbox{\Hypertarget{class_robot_ae0eff59916bb72759d2511b0f7cf4a95}\label{class_robot_ae0eff59916bb72759d2511b0f7cf4a95}} 
+\index{Robot@{Robot}!Mover@{Mover}}
+\index{Mover@{Mover}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{Mover()}{Mover()}}
+{\footnotesize\ttfamily void Robot.\+Mover (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_robot_adc335de87bcdff79aedb1ca355c13d95}{Robot.\+Direcao\+Movimento}}}]{direcao,  }\item[{\mbox{\hyperlink{class_map}{Map}}}]{mapa }\end{DoxyParamCaption})}
+
+
+
+Movimenta o jogador em uma determinada posição. Durante o movimento a função checa se a quatidade de energia é suficiente. Caso contrario o evento {\ttfamily Low\+Energy\+Event} é lançado.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em direcao} & Direção de movimento do jogador\\
+\hline
+{\em mapa} & Mapa pelo qual o jogador se movimenta\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_robot_ab2d1c59977c82a665123106d51f8214a}\label{class_robot_ab2d1c59977c82a665123106d51f8214a}} 
+\index{Robot@{Robot}!OnLowEnergyEvent@{OnLowEnergyEvent}}
+\index{OnLowEnergyEvent@{OnLowEnergyEvent}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{OnLowEnergyEvent()}{OnLowEnergyEvent()}}
+{\footnotesize\ttfamily virtual void Robot.\+On\+Low\+Energy\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Evento lançado quando o jogador fica sem energia.  
+
+\mbox{\Hypertarget{class_robot_a1e71b633c1f4f7161b8020a2c22a828b}\label{class_robot_a1e71b633c1f4f7161b8020a2c22a828b}} 
+\index{Robot@{Robot}!PegarJoia@{PegarJoia}}
+\index{PegarJoia@{PegarJoia}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{PegarJoia()}{PegarJoia()}}
+{\footnotesize\ttfamily void Robot.\+Pegar\+Joia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map}{Map}}}]{mapa }\end{DoxyParamCaption})}
+
+
+
+Coleta uma joia adjascente ao player no mapa, adiciona seu valor ao total de pontos, soma na quantidade de itens da bolsa e remove do mapa a jóia. Caso a joia coletada seja Azul aumenta a energia disponivel para o player em 5.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Mapa pelo qual o jogador se movimenta\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_robot_aff0465c1b585f0ab6c8fbea5da4f91c7}\label{class_robot_aff0465c1b585f0ab6c8fbea5da4f91c7}} 
+\index{Robot@{Robot}!RechargeWArvore@{RechargeWArvore}}
+\index{RechargeWArvore@{RechargeWArvore}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{RechargeWArvore()}{RechargeWArvore()}}
+{\footnotesize\ttfamily void Robot.\+Recharge\+WArvore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map}{Map}}}]{mapa }\end{DoxyParamCaption})}
+
+
+
+Quanto adjascente a uma ou mais arvores recarrega a energia disponivel para o player em 3 unidade por arvore adjascente.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_robot_a6f1b02d6a4b277911b8a94d132efd42c}\label{class_robot_a6f1b02d6a4b277911b8a94d132efd42c}} 
+\index{Robot@{Robot}!resetRobot@{resetRobot}}
+\index{resetRobot@{resetRobot}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{resetRobot()}{resetRobot()}}
+{\footnotesize\ttfamily void Robot.\+reset\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Volta os valores de\+: 
+\begin{DoxyItemize}
+\item Posição x,y 
+\item Energia 
+\item Total de pontos (Value) 
+\item Numero de jóias coletadas 
+\end{DoxyItemize}Para o valor padrão quando o jogador avança uma fase  
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_robot_a1ae18603342894ba1af361b704a33d32}\label{class_robot_a1ae18603342894ba1af361b704a33d32}} 
+\index{Robot@{Robot}!Energy@{Energy}}
+\index{Energy@{Energy}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{Energy}{Energy}}
+{\footnotesize\ttfamily int Robot.\+Energy\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Armaze a quantidade de energia que o jogar tem disponivel para se locomover.  
+
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_robot_aa4c111d9ddfab8b47d546d0b01f50892}\label{class_robot_aa4c111d9ddfab8b47d546d0b01f50892}} 
+\index{Robot@{Robot}!LowEnergyEvent@{LowEnergyEvent}}
+\index{LowEnergyEvent@{LowEnergyEvent}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{LowEnergyEvent}{LowEnergyEvent}}
+{\footnotesize\ttfamily Event\+Handler? Robot.\+Low\+Energy\+Event}
+
+
+
+Evento disparado quando o jogador fica sem energia para se movimentar e tenta se mover.  
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_robot_8cs}{Robot.\+cs}}\end{DoxyCompactItemize}

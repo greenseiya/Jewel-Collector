@@ -1,7 +1,12 @@
 using static System.Console;
 using Figgle;
-
+/// <summary>
+/// Classe <c>JewelCollector</c> inicia o jogo e exibe algumas informações para o jogador
+/// </summary>
 public class JewelCollector {
+  /// <summary>
+  /// Main configura a tela do console, chama as funções que exibem informações na tela e inicia o jogo
+  /// </summary>
   public static void Main() {
     Title = "JewelCollector";
     CursorVisible = false;
@@ -10,7 +15,10 @@ public class JewelCollector {
     TeladeCreditos();
   }
 
-  private static void TeladeInicio(){
+  /// <summary>
+  /// Exibe informações para o jogador com o titulo do jogo e como jogar.
+  /// </summary>
+  public static void TeladeInicio(){
         Console.Clear();
         WriteLine(FiggleFonts.Slant.Render("  Jewel Collector"));
 
@@ -22,8 +30,10 @@ public class JewelCollector {
         WriteLine("\n      Precione qualquer tecla para iniciar...");
         ReadKey(true);
   }
-
-  private static void TeladeCreditos(){
+  /// <summary>
+  /// Tela final do jogo com os créditos ao desenvolverdor
+  /// </summary>
+  public static void TeladeCreditos(){
         Clear();
         WriteLine(FiggleFonts.Slant.Render("  Jewel Collector"));
 
@@ -39,7 +49,9 @@ public class JewelCollector {
         WriteLine("\n      Precione qualquer tecla para sair...");
         ReadKey(true);
   }
-
+  /// <summary>
+  /// Tela de GameOver exibida quando <c>Robot</c> fica sem energia para se movimentar
+  /// </summary>
   public static void TelaGameOver(){
     Clear();
         WriteLine(FiggleFonts.Slant.Render("  Game Over!"));

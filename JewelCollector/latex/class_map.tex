@@ -1,0 +1,303 @@
+\hypertarget{class_map}{}\doxysection{Map Class Reference}
+\label{class_map}\index{Map@{Map}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_map_af020476bbce3b6eb3e74621d8503a957}{Map}} ()
+\begin{DoxyCompactList}\small\item\em Construtor que inicia um matriz de {\ttfamily Objetos\+Na\+Tela} com um tamanho reduzido  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_aa492a7dabd34c8b3a58fc8057e2cb506}{Add}} (\mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}} elemento\+Novo)
+\begin{DoxyCompactList}\small\item\em Adiciona um elemento a matriz mapa usando como indice as posiçoes (x,y) do elemento.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_aacfd6d53de5ab6631b09678f9bda9111}{Remove}} (\mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}} elemento\+PRemover)
+\begin{DoxyCompactList}\small\item\em Remove um elemento da matriz. Após a remoção no lugar do mesmo é adicionado um {\ttfamily \mbox{\hyperlink{class_caminho_livre}{Caminho\+Livre}}}  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_map_a928eadfbd7d666ba19fb75a04f8015e8}{EAndavel}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Determina se um elemento da matriz é transponivel ou não  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}}? \mbox{\hyperlink{class_map_aa3968c2fa172c54e30d08438046ca3dd}{Pega\+Joia}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Retorna um elemento adjacente a (x,y) que seja uma jóia.  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_map_ad974bfc125ac51b12ecefaf40e850601}{Tem\+Joia\+Perto}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Determina se um existe uma jóia adjacente a (x,y).  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_ac73e17a23598fbe945ee8eb36a177fc9}{level\+Design}} (int lvl)
+\begin{DoxyCompactList}\small\item\em Cria um mapa para o jogador navegar baseado no level do jogo.  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_map_ad09313c783283661a30add560f0073fb}{Tem\+Arvore\+Perto}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Determina se um existe uma arvore adjacente a (x,y).  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_map_ae8426c5dd6fee085f6bbf204ee7b0251}{Qtd\+Arvore\+Perto}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Determina a quantidade de jóias adjacentes a (x,y).  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_map_afaa916fd1b94983ab4b27d2e10ed23b1}{Tem\+Radiacao\+Perto}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Determina se um existe um elemento radioativo adjacente a (x,y).  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}} \mbox{\hyperlink{class_map_a4449584ca491ab5176aec5cee2a6d246}{pega\+Elemento}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Retorna um elemento do mapa na posição (x,y)  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_map_a5f2623635cb393adf0f5e3a797732d7c}{Onout\+Of\+Jewels}} ()
+\begin{DoxyCompactList}\small\item\em Lança o evento {\ttfamily out\+Of\+Jewels\+Event} quando o jogador coleta todas as jóias do mapa  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_acf2241a162ee4280524a06f7cf882ae2}{Imprimir\+Mapa}} ()
+\begin{DoxyCompactList}\small\item\em Limpa a tela do console e imprime o mapa.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_map_a2654648aaafaad85e163f76857c502ff}{Size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tamanho do mapa que vaira conforme o level do jogo  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler? \mbox{\hyperlink{class_map_a189ccaa1dd99dd7a129505d296ecd988}{out\+Of\+Jewels\+Event}}
+\begin{DoxyCompactList}\small\item\em Evento que é lançado quando o jogador coletou todas as joias da fase e pode avançar para a próxima  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_map_af020476bbce3b6eb3e74621d8503a957}\label{class_map_af020476bbce3b6eb3e74621d8503a957}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Map.\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor que inicia um matriz de {\ttfamily Objetos\+Na\+Tela} com um tamanho reduzido  
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_map_aa492a7dabd34c8b3a58fc8057e2cb506}\label{class_map_aa492a7dabd34c8b3a58fc8057e2cb506}} 
+\index{Map@{Map}!Add@{Add}}
+\index{Add@{Add}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Map.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}}}]{elemento\+Novo }\end{DoxyParamCaption})}
+
+
+
+Adiciona um elemento a matriz mapa usando como indice as posiçoes (x,y) do elemento.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em elemento\+Novo} & Elemento a ser adicionado a matriz\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_map_a928eadfbd7d666ba19fb75a04f8015e8}\label{class_map_a928eadfbd7d666ba19fb75a04f8015e8}} 
+\index{Map@{Map}!EAndavel@{EAndavel}}
+\index{EAndavel@{EAndavel}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{EAndavel()}{EAndavel()}}
+{\footnotesize\ttfamily bool Map.\+EAndavel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Determina se um elemento da matriz é transponivel ou não  
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Indice x do elemento na matriz\\
+\hline
+{\em y} & Indice y do elemento na matriz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE caso o elemento seja transponivel
+
+FALSE caso seja sólido
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_acf2241a162ee4280524a06f7cf882ae2}\label{class_map_acf2241a162ee4280524a06f7cf882ae2}} 
+\index{Map@{Map}!ImprimirMapa@{ImprimirMapa}}
+\index{ImprimirMapa@{ImprimirMapa}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{ImprimirMapa()}{ImprimirMapa()}}
+{\footnotesize\ttfamily void Map.\+Imprimir\+Mapa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa a tela do console e imprime o mapa.  
+
+\mbox{\Hypertarget{class_map_ac73e17a23598fbe945ee8eb36a177fc9}\label{class_map_ac73e17a23598fbe945ee8eb36a177fc9}} 
+\index{Map@{Map}!levelDesign@{levelDesign}}
+\index{levelDesign@{levelDesign}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{levelDesign()}{levelDesign()}}
+{\footnotesize\ttfamily void Map.\+level\+Design (\begin{DoxyParamCaption}\item[{int}]{lvl }\end{DoxyParamCaption})}
+
+
+
+Cria um mapa para o jogador navegar baseado no level do jogo.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em lvl} & Fase atual do jogo (1-\/30)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_map_a5f2623635cb393adf0f5e3a797732d7c}\label{class_map_a5f2623635cb393adf0f5e3a797732d7c}} 
+\index{Map@{Map}!OnoutOfJewels@{OnoutOfJewels}}
+\index{OnoutOfJewels@{OnoutOfJewels}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{OnoutOfJewels()}{OnoutOfJewels()}}
+{\footnotesize\ttfamily virtual void Map.\+Onout\+Of\+Jewels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Lança o evento {\ttfamily out\+Of\+Jewels\+Event} quando o jogador coleta todas as jóias do mapa  
+
+\mbox{\Hypertarget{class_map_a4449584ca491ab5176aec5cee2a6d246}\label{class_map_a4449584ca491ab5176aec5cee2a6d246}} 
+\index{Map@{Map}!pegaElemento@{pegaElemento}}
+\index{pegaElemento@{pegaElemento}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{pegaElemento()}{pegaElemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}} Map.\+pega\+Elemento (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Retorna um elemento do mapa na posição (x,y)  
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Indice x do elemento na matriz\\
+\hline
+{\em y} & Indice y do elemento na matriz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}}} na posição (x,y).
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_aa3968c2fa172c54e30d08438046ca3dd}\label{class_map_aa3968c2fa172c54e30d08438046ca3dd}} 
+\index{Map@{Map}!PegaJoia@{PegaJoia}}
+\index{PegaJoia@{PegaJoia}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{PegaJoia()}{PegaJoia()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}}? Map.\+Pega\+Joia (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Retorna um elemento adjacente a (x,y) que seja uma jóia.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Indice x do elemento na matriz\\
+\hline
+{\em y} & Indice y do elemento na matriz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}}} caso exista uma jóia adjascente a (x,y)
+
+NULL caso contrario
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_ae8426c5dd6fee085f6bbf204ee7b0251}\label{class_map_ae8426c5dd6fee085f6bbf204ee7b0251}} 
+\index{Map@{Map}!QtdArvorePerto@{QtdArvorePerto}}
+\index{QtdArvorePerto@{QtdArvorePerto}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{QtdArvorePerto()}{QtdArvorePerto()}}
+{\footnotesize\ttfamily int Map.\+Qtd\+Arvore\+Perto (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Determina a quantidade de jóias adjacentes a (x,y).  
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Indice x do elemento na matriz\\
+\hline
+{\em y} & Indice y do elemento na matriz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Quantidade de arvores adjacentes a (x,y)
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_aacfd6d53de5ab6631b09678f9bda9111}\label{class_map_aacfd6d53de5ab6631b09678f9bda9111}} 
+\index{Map@{Map}!Remove@{Remove}}
+\index{Remove@{Remove}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void Map.\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_objeto_na_tela}{Objeto\+Na\+Tela}}}]{elemento\+PRemover }\end{DoxyParamCaption})}
+
+
+
+Remove um elemento da matriz. Após a remoção no lugar do mesmo é adicionado um {\ttfamily \mbox{\hyperlink{class_caminho_livre}{Caminho\+Livre}}}  
+
+
+\begin{DoxyParams}{Parameters}
+{\em elemento\+PRemover} & Elemento a ser removido da matriz\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_map_ad09313c783283661a30add560f0073fb}\label{class_map_ad09313c783283661a30add560f0073fb}} 
+\index{Map@{Map}!TemArvorePerto@{TemArvorePerto}}
+\index{TemArvorePerto@{TemArvorePerto}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{TemArvorePerto()}{TemArvorePerto()}}
+{\footnotesize\ttfamily bool Map.\+Tem\+Arvore\+Perto (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Determina se um existe uma arvore adjacente a (x,y).  
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Indice x do elemento na matriz\\
+\hline
+{\em y} & Indice y do elemento na matriz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE caso tenha ao menos uma arvore adjacente a (x,y)
+
+FALSE caso contrario
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_ad974bfc125ac51b12ecefaf40e850601}\label{class_map_ad974bfc125ac51b12ecefaf40e850601}} 
+\index{Map@{Map}!TemJoiaPerto@{TemJoiaPerto}}
+\index{TemJoiaPerto@{TemJoiaPerto}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{TemJoiaPerto()}{TemJoiaPerto()}}
+{\footnotesize\ttfamily bool Map.\+Tem\+Joia\+Perto (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Determina se um existe uma jóia adjacente a (x,y).  
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Indice x do elemento na matriz\\
+\hline
+{\em y} & Indice y do elemento na matriz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE caso tenha ao menos uma jóia adjacente a (x,y)
+
+FALSE caso contrario
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_afaa916fd1b94983ab4b27d2e10ed23b1}\label{class_map_afaa916fd1b94983ab4b27d2e10ed23b1}} 
+\index{Map@{Map}!TemRadiacaoPerto@{TemRadiacaoPerto}}
+\index{TemRadiacaoPerto@{TemRadiacaoPerto}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{TemRadiacaoPerto()}{TemRadiacaoPerto()}}
+{\footnotesize\ttfamily bool Map.\+Tem\+Radiacao\+Perto (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Determina se um existe um elemento radioativo adjacente a (x,y).  
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Indice x do elemento na matriz\\
+\hline
+{\em y} & Indice y do elemento na matriz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE caso tenha ao menos um elemento radioativo adjacente a (x,y)
+
+FALSE caso contrario
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_map_a2654648aaafaad85e163f76857c502ff}\label{class_map_a2654648aaafaad85e163f76857c502ff}} 
+\index{Map@{Map}!Size@{Size}}
+\index{Size@{Size}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily int Map.\+Size\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Tamanho do mapa que vaira conforme o level do jogo  
+
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_map_a189ccaa1dd99dd7a129505d296ecd988}\label{class_map_a189ccaa1dd99dd7a129505d296ecd988}} 
+\index{Map@{Map}!outOfJewelsEvent@{outOfJewelsEvent}}
+\index{outOfJewelsEvent@{outOfJewelsEvent}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{outOfJewelsEvent}{outOfJewelsEvent}}
+{\footnotesize\ttfamily Event\+Handler? Map.\+out\+Of\+Jewels\+Event}
+
+
+
+Evento que é lançado quando o jogador coletou todas as joias da fase e pode avançar para a próxima  
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_map_8cs}{Map.\+cs}}\end{DoxyCompactItemize}

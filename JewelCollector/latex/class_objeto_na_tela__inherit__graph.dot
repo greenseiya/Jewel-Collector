@@ -1,0 +1,16 @@
+digraph "ObjetoNaTela"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="ObjetoNaTela",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Class  ObjetoNaTela é um classe abstrata que armazena as informações comuns a todos os elementos que ..."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="CaminhoLivre",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_caminho_livre.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="Jewel",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_jewel.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="Obstacle",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_obstacle.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="Robot",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_robot.html",tooltip=" "];
+}
